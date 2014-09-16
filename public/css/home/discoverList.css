@@ -6,28 +6,19 @@
 
 /*内容区*/
 .contain{float:left; width:100%; margin-top:20px;}
-.contain .content{margin:0 auto; width:1260px;}
+.contain .content{margin:0 auto; width:1260px; height:100%;}
 
-/*con-left*/
-.con-left{float:left; width:900px;}
-.music-list{float:left; width:880px;}
-.music-list li{float:left; width:880px; margin-bottom:30px; border-bottom:1px dotted #ccc; padding-bottom:30px;}
-.music-list li .art-img{float:left; width:420px; height:280px; background:black;}
-.music-list li .art-img img{float:left; width:420px; height:280px; cursor:pointer;}
-.music-list li .art-warp{float:left; width:400px; height:279px; margin-left:29px; padding-left:30px; border-left:1px dotted #ccc;}
-.music-list li .art-warp .art-content{float:left; width:400px;}
-.music-list li .art-warp-title{float:left; width:360px; height:35px;}
-.music-list li .art-warp-title a{float:left; color:#063; font-size:16px; font-family:"微软雅黑"; text-decoration:none;}
-.music-list li .art-warp-con{float:left; width:400px; height:175px; border-bottom:1px dotted #ccc;}
-.music-list li .art-warp-con p{color:#333; font-size:12px;height:99px;overflow:hidden;line-height:25px;}
-.music-list li .art-warp-con button{margin-top:5px;}
-
-.music-list li .art-warp .art-other{float:left; clear:both; height:70px; padding-top:15px;color:#bbb; font-size:12px;}
+/*music*/
+.music-box{float:left; width:100%; position:relative;}
+.music{float:left; width:252px; height:300px;}
+.music-img{float:left; width:232px; height:232px; margin:10px; text-align:center; background:black; border:2px solid #ccc; position:relative;}
+.music-img>img{float:left; width:228px; height:228px;}
+.music-img p{width:228px; height:0; background:black; bottom:-10px; opacity:0.6; filter:alpha(opacity=60); position:absolute; display:none;}
+.music-img p a{float:left;margin:35px;font-size:12px;color:white;}
+.music-tit{float:left; width:252px; height:20px; line-height:20px; text-align:center; font-size:14px; font-family:"微软雅黑"; font-weight:bold; color:#333;}
+.music-tag{float:left; width:252px; height:20px; line-height:20px; text-align:center; color:#666; margin-top:5px; font-size:12px;}
 
 
-
-/*阅读更多*/
-.article-read{float:left; clear:both; width:80px; height:30px; line-height:30px; margin-top:20px; background:#333; text-align:center;}
-.article-read:hover{ background-color:#363; cursor:pointer;}
-.article-read a{color:white; text-decoration:none; font-size:12px;}
-.article-read a span{ font-size:10px;}
+/*more*/
+#more{float:left; clear:both; margin-top:25px; width:1260px; height:35px; line-height:35px; text-align:center;}
+#more span{float:left; margin-left:490px; width:280px; height:35px; background:#ccc; color:white; font-size:14px; font-family:"微软雅黑"; cursor:pointer;}
