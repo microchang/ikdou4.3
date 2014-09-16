@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title><%=title %></title>
+<link rel='stylesheet' href='/libs/bootstrap/css/bootstrap.min.css' /><!-- Custom styles for this template -->
+<link href="/libs/admin-ui/css/admin.min.css" rel="stylesheet"><!-- 后台界面样式 -->
+<link href="/css/admin/dashboard.css" rel="stylesheet">
+<link href="/libs/font-awesome/css/font-awesome.min.css" rel="stylesheet"><!-- 字体图标库 -->
+<script src="/libs/bootstrap/js/ie-emulation-modes-warning.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/libs/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/libs/jquery/jquery.min.js"></script>
+<script src="/libs/angular/angular.min.js"></script>
+<script src="/js/admin/left/leftController.js"></script>
+</head>
+<body>
+<!--<div class="navbar navbar-inverse navbar-fixed-top" style="opacity:0.9;ilter:alpha(opacity=90);" role="navigation">-->
+  <!--<div class="container-fluid">-->
+	<!--<div class="navbar-header">-->
+	  <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">-->
+		<!--<span class="sr-only">Toggle navigation</span>-->
+		<!--<span class="icon-bar"></span>-->
+		<!--<span class="icon-bar"></span>-->
+		<!--<span class="icon-bar"></span>-->
+	  <!--</button>-->
+	  <!--<a class="navbar-brand" href="/admin/list">Ikdou管理平台</a>-->
+	<!--</div>-->
+	<!--<div class="navbar-collapse collapse">-->
+	  <!--<ul class="nav navbar-nav navbar-right">-->
+		<!--<li><a href="#">Dashboard</a></li>-->
+		<!--<li><a href="#">Settings</a></li>-->
+		<!--<li><a href="#">Profile</a></li>-->
+		<!--<li><a href="#">Help</a></li>-->
+	  <!--</ul>-->
+	  <!--<form class="navbar-form navbar-right">-->
+		<!--<input type="text" class="form-control" placeholder="Search...">-->
+	  <!--</form>-->
+	<!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<header id="header">
+<div id="logo-group">
+    <div id="logo"> <!--<img src="img/logo.png" alt="SmartAdmin">-->  <a class="navbar-brand logoText" href="/admin/list">Ikdou管理平台</a></div>
+</div>
+<div class="project-context hidden-xs">
+    <span class="label">项目</span>
+    <span class="project-selector dropdown-toggle" data-toggle="dropdown">最近提醒：<i class="fa fa-angle-down"></i></span>
+    <ul class="dropdown-menu">
+        <li>
+            <a href="javascript:void(0);">提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容</a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容</a>
+        </li>
+        <li>
+            <a href="javascript:void(0);">提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容提醒内容</a>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="javascript:void(0);"><i class="fa fa-power-off"></i>&nbsp;知道了</a>
+        </li>
+    </ul>
+</div>
+<div class="pull-right">
+    <div id="hide-menu" class="btn-header pull-right">
+        <span> <a href="javascript:void(0);" data-action="toggleMenu" title="折叠菜单"><i class="fa fa-reorder"></i></a> </span>
+    </div>
+    <div id="logout" class="btn-header transparent pull-right">
+        <span> <a href="login.html" title="退出" data-action="userLogout" data-logout-msg="安全退出"><i class="fa fa-sign-out"></i></a> </span>
+    </div>
+    <div id="search-mobile" class="btn-header transparent pull-right">
+        <span> <a href="javascript:void(0)" title="Search"><i class="fa fa-search"></i></a> </span>
+    </div>
+    <form action="#ajax/search.html" class="header-search pull-right">
+        <input id="search-fld" type="text" name="param" placeholder="关键词">
+        <button type="submit">
+            <i class="fa fa-search"></i>
+        </button>
+        <a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+    </form>
+    <div id="fullscreen" class="btn-header transparent pull-right">
+        <span> <a href="javascript:void(0);" data-action="launchFullscreen" title="全屏展示"><i class="fa fa-arrows-alt"></i></a> </span>
+    </div>
+</div>
+</header>

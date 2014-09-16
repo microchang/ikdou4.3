@@ -1,0 +1,113 @@
+<%- include ../layout/header %>
+<style>
+    table th {
+        text-align: center
+    }
+
+    table td {
+        text-align: center
+    }
+</style>
+<div class="container-fluid" ng-app="myApp" id="main" role="main">
+    <div id="ribbon">
+        <span class="ribbon-button-alignment">
+            <span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh" rel="tooltip"
+                  data-placement="bottom"
+                  data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings."
+                  data-html="true"
+                  data-reset-msg="Would you like to RESET all your saved widgets and clear LocalStorage?">
+                <i class="fa fa-refresh"></i>
+            </span>
+        </span>
+        <ol class="breadcrumb">
+            <li>音乐</li>
+            <li>描述</li>
+        </ol>
+    </div>
+
+    <div class="row">
+        <!--左侧栏导航-->
+        <%- include ../layout/left %>
+        <!--内容显示区域-->
+        <div class=" main" ng-controller="userCtrl">
+            <nav class="navbar navbar-default" role="navigation">
+                <form class="navbar-form navbar-left" role="search">
+                    <label class="control-label">搜索：</label>
+
+                    <div class="form-group">
+                        <input type="text" ng-model="search" class="form-control" placeholder="搜索音乐名字...">
+                    </div>
+                </form>
+                <!--电影下拉列表-->
+                <form class="navbar-form navbar-left" method="GET">
+                    <label class="control-label">分类：</label>
+                    <select name="type" class="form-control" style="width:100px" ng-model="searchType">
+                        <option></option>
+                        <option>科幻</option>
+                        <option>剧情</option>
+                        <option>犯罪</option>
+                        <option>西部</option>
+                        <option>爱情</option>
+                    </select>
+                    <button type="button" class="btn btn-default" ng-click='add()'>新 增</button>
+                </form>
+            </nav>
+            <div class="table-responsive">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr class="active">
+                        <th><input type="checkbox"/></th>
+                        <th>电影名字</th>
+                        <th>导演</th>
+                        <th>类型</th>
+                        <th>国家</th>
+                        <th>上映年份</th>
+                        <th>录入时间</th>
+                        <th>查看</th>
+                        <th>更新</th>
+                        <th>删除</th>
+                    </tr>
+                    <tbody>
+                    <tr ng-repeat="item in data | filter:{title:search} | filter:{type:searchType}">
+                        <td><input type="checkbox"/></td>
+                        <td>{{item.title}}</td>
+                        <td>{{item.doctor}}</td>
+                        <td>{{item.type}}</td>
+                        <td>{{item.country}}</td>
+                        <td>{{item.year}}</td>
+                        <td>{{item.meta.updateAt|date:'y-MM-dd H:mm:ss'}}</td>
+                        <td>
+                            <a href="../movie/{{item._id}}">查 看</a>
+                        </td>
+                        <td>
+                            <a href="/admin/adminListUpdate/{{item._id}}">更 新</a>
+                        </td>
+                        <td>
+                            <input class="btn btn-danger del" type="button" ng-click='remove(item._id)' value="删 除"/>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </thead>
+                </table>
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                    <li><a href="#">总记录：20</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/libs/jquery/jquery.min.js"></script>
+<script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="/libs/angular/angular.min.js"></script>
+<script src="/js/admin/movie/movieController.js"></script>
+<script src="/libs/admin-ui/js/admin.config.js"></script>
+<script src="/libs/admin-ui/js/admin.min.js"></script>
+<%- include ../layout/footer %>

@@ -1,0 +1,57 @@
+﻿/*art-box*/
+.art-box{float:left; width:100%; height:160px; background:url(/images/home/fresh-bg.jpg) repeat-x;  margin-top:40px;}
+.art-box .art-box-con{margin:0 auto; width:1260px;}
+.art-box .art-lomo{float:left; width:100%; height:160px; line-height:160px; font-size:24px; position:relative;}
+.art-box .art-lomo a{font-size:24px; color:white; position:absolute; left:0; top:0; z-index:1; height:24px; line-height:24px; margin:20px;}
+.art-box .art-lomo label{font-size:12px; color:white; position:absolute; left:20px; top:80%; height:12px; line-height:12px; z-index:1;}
+
+/*内容区*/
+.contain{float:left; width:100%; margin-top:20px;}
+.contain .content{margin:0 auto; width:1260px;}
+
+/*con-left*/
+.con-left{float:left; width:880px; margin-right:20px;}
+
+.con-left .shadow-warp{float:left; width:880px;}
+.con-left .shadow-movie{float:left; width:880px; height:600px; background:black;}
+.con-left .shadow-movie embed{float:left; width:880px; height:600px; cursor:pointer;}
+.con-left .shadow-warp-con{float:left; width:880px; margin-top:20px; font-size:12px;}
+
+/*猜你还喜欢*/
+.guess{float:left; clear:both; width:880px; margin:60px 0;}
+.guess .guess-name{float:left; clear:both; height:30px; line-height:20px; font-size:14px; font-family:"微软雅黑"; color:#063;}
+.guess .guess-con{float:left; clear:both; width:880px;}
+.guess .guess-con div{float:left; width:148px; height:168px; border:1px solid #e6e6df; margin:10px;}
+.guess .guess-con div:hover{border:1px solid #ccc;}
+.guess-con .guess-con-img{float:left; margin:10px; width:128px; height:100px;}
+.guess .guess-con img{width:128px; height:100px;}
+.guess .guess-con .guess-con-name{float:left; width:128px; height:58px; margin-left:10px;}
+.guess .guess-con .guess-con-name a{text-decoration:none; color:#333;font-size:12px;}
+.guess .guess-con .guess-con-name a:hover{color:#063;}
+
+/*mess*/
+.con-left ul{float:left; width:880px; margin:20px 0;}
+.con-left ul li{float:left; width:880px; margin-bottom:20px;}
+.mess-member{float:left; width:60px; height:60px; border:2px solid #ccc; border-radius:60px; background-color:black; cursor:pointer;}
+.mess-member img{width:56px; height:56px; border-radius:56px;}
+.mess-content{float:left; width:800px; margin-left:20px;}
+.mess-content .mess-con-info{float:left; width:800px; height:30px;}
+.mess-content .mess-time{float:left; width:740px; padding-left:10px; background:#faf9f5; color:#ccc; height:30px; line-height:30px; }
+.mess-btn{float:left; width:50px; height:30px; line-height:30px; background:#333; text-align:center;}
+.mess-btn:hover{background-color:#363; cursor:pointer;}
+.mess-btn a{color:white; text-decoration:none; font-size:12px;}
+.mess-con{float:left; clear:both; width:100%; margin:10px; color:#333;}
+
+
+/*留言板*/
+.message-board{float:left; clear:both; width:878px; height:253px; background:#faf9f5; border:1px solid #e6e6df; margin-top:20px; padding:20px;}
+.mes-name{float:left; clear:both; height:30px; line-height:30px; color:#333;}
+.mes-con{float:left; clear:both; line-height:30px; color:#333; margin-top:10px;}
+.mes-con textarea{ width:835px; min-height:130px; border:1px solid #e6e6df; background:url(/images/home/content-bg.png) white; padding:10px; color:#333;}
+
+/*阅读更多*/
+.article-read{float:left; clear:both; width:70px; height:30px; line-height:30px; margin-top:20px; background:#333; text-align:center;}
+.article-read:hover{ background-color:#363; cursor:pointer;}
+.article-read a{color:white; text-decoration:none; font-size:12px;}
+.article-read a span{font-size:10px;}
+

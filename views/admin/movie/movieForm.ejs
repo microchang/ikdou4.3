@@ -1,0 +1,162 @@
+<%- include ../layout/header %>
+<!-- 日期控件-->
+<link rel="stylesheet" href="/libs/bootstrap/css/bootstrap-datetimepicker.min.css" type="text/css">
+<!--左侧栏导航-->
+<%- include ../layout/left %>
+<!--内容显示区域-->
+<div class="container-fluid" ng-app="myApp" id="main" role="main">
+    <div id="ribbon">
+        <span class="ribbon-button-alignment">
+            <span id="refresh" class="btn btn-ribbon" data-action="resetWidgets" data-title="refresh" rel="tooltip"
+                  data-placement="bottom"
+                  data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings."
+                  data-html="true"
+                  data-reset-msg="Would you like to RESET all your saved widgets and clear LocalStorage?">
+                <i class="fa fa-refresh"></i>
+            </span>
+        </span>
+        <ol class="breadcrumb">
+            <li>音乐</li>
+            <li>描述</li>
+        </ol>
+    </div>
+    <div class="main">
+       <div class="row">
+                <form action="/admin/adminListPut" class="form-horizontal" method="post">
+                    <input type="hidden" name="movie[_id]" value="<%= movie._id %>"/>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputTitle">电影名字</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="inputTitle"
+                                   name="movie[title]" value="<%= movie.title %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputDoctor">电影导演</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="inputTitle"
+                                   name="movie[doctor]" value="<%= movie.doctor %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputType">类型</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="inputTitle"
+                                   name="movie[type]" value="<%= movie.type %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputCountry">国家</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="inputTitle"
+                                   name="movie[country]" value="<%= movie.country %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputLanguage">语种</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="inputTitle"
+                                   name="movie[language]" value="<%= movie.language %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputPoster">海报地址</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="inputTitle"
+                                   name="movie[poster]" value="<%= movie.poster %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputFlash">片源地址</label>
+
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="inputTitle"
+                                   name="movie[flash]" value="<%= movie.flash %>">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputYear">上映年代</label>
+
+                        <div class="col-sm-7">
+                            <div class="input-group date form_datetime col-md-10" data-date="1979-09-16T05:25:07Z"
+                                 data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                                <input name="movie[year]" class="form-control" size="16" type="text"
+                                       value="<%= movie.year %>">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="dtp_input1" value=""/>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="inputSummary">简介</label>
+
+						<div class="col-sm-7">
+                            <textarea row="9" name="movie[summary]"><%= movie.summary %></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-9">
+                            <input type="submit" class="btn btn-default"
+                                   value="确 定">
+                        </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>
+<!--尾部区域end-->
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script type="text/javascript" src="/libs/jquery/jquery.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script type="text/javascript" src="/libs/bootstrap/js/bootstrap.min.js"></script>
+<!-- 日期控件 -->
+<script type="text/javascript" src="/libs/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+
+<script type="text/javascript" src="/libs/bootstrap/js/locales/bootstrap-datetimepicker.zh-CN.js"
+        charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn: 1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+</script>
+<script charset="utf-8" src="/libs/kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="/libs/kindeditor/lang/zh_CN.js"></script>
+<script src="/libs/admin-ui/js/admin.config.js"></script>
+<script src="/libs/admin-ui/js/admin.min.js"></script>
+<script>
+    var editor;
+    KindEditor.ready(function (K) {
+        editor = K.create('textarea', {
+            allowImageUpload: false,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic',
+                'underline', 'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+        });
+    });
+</script>
+<%- include ../layout/footer %>

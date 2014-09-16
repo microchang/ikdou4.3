@@ -1,0 +1,33 @@
+﻿/*art-box*/
+.art-box{float:left; width:100%; height:160px; background:#efefef; margin-top:40px;}
+.art-box .art-lomo{float:left; width:100%; height:160px; line-height:160px; position:relative;}
+.art-box .art-lomo a{font-size:24px; font-family:"微软雅黑"; color:white; position:absolute; left:5%;top:20%; height:24px; line-height:24px; z-index:1;}
+.art-box .art-lomo img{float:left; width:100%; height:160px; position:absolute; left:0; top:0;}
+
+/*内容区*/
+.contain{float:left; width:100%; margin-top:20px;}
+.contain .content{margin:0 auto; width:1260px;}
+
+/*con-left*/
+.con-left{float:left; width:900px;}
+.music-list{float:left; width:880px;}
+.music-list li{float:left; width:880px; margin-bottom:30px; border-bottom:1px dotted #ccc; padding-bottom:30px;}
+.music-list li .art-img{float:left; width:420px; height:280px; background:black;}
+.music-list li .art-img img{float:left; width:420px; height:280px; cursor:pointer;}
+.music-list li .art-warp{float:left; width:400px; height:279px; margin-left:29px; padding-left:30px; border-left:1px dotted #ccc;}
+.music-list li .art-warp .art-content{float:left; width:400px;}
+.music-list li .art-warp-title{float:left; width:360px; height:35px;}
+.music-list li .art-warp-title a{float:left; color:#063; font-size:16px; font-family:"微软雅黑"; text-decoration:none;}
+.music-list li .art-warp-con{float:left; width:400px; height:175px; border-bottom:1px dotted #ccc;}
+.music-list li .art-warp-con p{color:#333; font-size:12px;height:99px;overflow:hidden;line-height:25px;}
+.music-list li .art-warp-con button{margin-top:5px;}
+
+.music-list li .art-warp .art-other{float:left; clear:both; height:70px; padding-top:15px;color:#bbb; font-size:12px;}
+
+
+
+/*阅读更多*/
+.article-read{float:left; clear:both; width:80px; height:30px; line-height:30px; margin-top:20px; background:#333; text-align:center;}
+.article-read:hover{ background-color:#363; cursor:pointer;}
+.article-read a{color:white; text-decoration:none; font-size:12px;}
+.article-read a span{ font-size:10px;}
