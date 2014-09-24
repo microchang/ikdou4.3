@@ -1,5 +1,5 @@
 /*
-用户信息数据库
+电影信息数据库
 */
 var mongoose = require('mongoose')
 var MovieSchema = require('../schemas/movie')

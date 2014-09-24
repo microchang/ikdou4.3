@@ -9,8 +9,8 @@ var controller=function(req,res,param){
 controller.prototype.music_ListGet=function(){  
     var res=this.res;  
 	
-	res.render('home/music/musicList', {	// 跳转到首页
-		title: '首页',
+	res.render('home/music/musicList', {	// 
+		title: '音乐模块列表页',
 	});
 };  
 
@@ -18,8 +18,8 @@ controller.prototype.music_ListGet=function(){
 controller.prototype.music_IndexGet=function(){  
     var res=this.res;  
 	
-	res.render('home/music/musicIndex', {	// 跳转到首页
-		title: '首页',
+	res.render('home/music/musicIndex', {	// 
+		title: '音乐详情页',
 	});
 }; 
 
